@@ -1,0 +1,39 @@
+{% extends "_layout.html" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/public/css/view.css">
+{% endblock %}
+
+{% block body %}
+  <div class="row">
+    <div class="col-6">
+      <div id="photo-container"></div>
+    </div>
+    <div class="col-6">
+      <table class="table table-sm table-hover">
+        <thead>
+          <tr>
+            <th>Object Detected</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        {% for label in detection['labels'] %}
+          {% for i, instance in enumerate(label['Instances']) %}
+            <tr data-label="{{ label['Name'] }}" data-label-idx="{{ i }}">
+              <td>{{ label['Name'] }}</td>
+              <td>{{ instance['Confidence'] }}</td>
+            </tr>
+          {% endfor %}
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    const LABEL_DATA = {{ detection['labels']|safe }};
+    const PHOTO_URL = '{{ detection['photo_url' ]}}';
+  </script>
+  <script src="/public/js/view.js"></script>
+{% endblock %}
