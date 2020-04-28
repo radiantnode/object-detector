@@ -1,0 +1,41 @@
+#photo-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 75%;
+  background: black url(/public/images/loader.gif) no-repeat 50% 50%;
+  box-sizing: content-box;
+}
+
+#photo-container.loaded {
+  padding-top: 0;
+}
+
+#photo-container img {
+  width: 100%;
+}
+
+#photo-container .boundry {
+  position: absolute;
+  border: solid 2px #007bff;
+  /* opacity: 0.6; */
+  box-sizing: content-box;
+}
+
+#photo-container .boundry:hover,
+#photo-container .boundry.hover {
+  background: #007bff;
+  opacity: 0.4;
+}
+
+.tooltip > .tooltip-inner {
+  background: #007bff;
+}
+
+.tooltip.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #007bff;
+}
+
+.tooltip.bs-tooltip-top .arrow::before {
+  border-top-color: #007bff;
+}

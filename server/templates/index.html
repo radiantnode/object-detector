@@ -1,0 +1,56 @@
+{% extends "_layout.html" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/public/css/index.css">
+{% endblock %}
+
+{% block body %}
+  <div class="row">
+    <div class="col-8">
+      <h4>Detections</h4>
+
+      <table id="detections-table" class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Capture Type</th>
+            <th>Objects Detected</th>
+          </tr>
+        </thead>
+        {% for detect in detections %}
+          <tr>
+            <td><a href="/view/{{ detect['id']}}">{{ detect['datetime']|datetime }}</a></td>
+            <td>{{ "Manual" if detect['manual_capture'] else "Auto" }}</td>
+            <td>
+              <ul class="list-inline text-muted mb-0">
+                {% for key in sorted(detect['counts']) %}
+                  <li class="list-inline-item">
+                    <strong>{{ key }}:</strong>
+                    {{ detect['counts'][key] }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="col-4">
+      <div id="preview-live" style="display:none">
+        <img id="preview-live-image" src="{{ config.STREAM_URL }}" crossorigin="anonymous" alt="Live Stream" />
+      </div>
+      <div id="preview-loader"></div>
+      <hr />
+      <button id="capture-button" class="btn btn-primary">Capture</button>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    const MOMENT_DATE_FORMAT = '{{ config.MOMENT_DATE_FORMAT }}';
+  </script>
+  <script src="/public/js/index.js"></script>
+{% endblock %}
