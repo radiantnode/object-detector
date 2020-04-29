@@ -72,7 +72,7 @@ $(() => {
   const injectRow = (data) => {
     const row = $('<tr>');
     row.append(`
-      <td><a href="/detect/${data['id']}">${moment(data['datetime']).format(MOMENT_DATE_FORMAT)}</a></td>
+      <td><a href="/view/${data['id']}">${moment(data['datetime']).format(MOMENT_DATE_FORMAT)}</a></td>
       <td>${data['manual_capture'] ? 'Manual': 'Auto'}</td>
       <td>
         <ul class="list-inline text-muted mb-0">
