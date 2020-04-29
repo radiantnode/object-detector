@@ -1,3 +1,5 @@
+/* global moment, MOMENT_DATE_FORMAT */
+
 $(() => {
   const previewLiveContainer = $('#preview-live');
   const previewLiveImage = $('#preview-live-image');
