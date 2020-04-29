@@ -4,6 +4,8 @@
 
 ## About
 
+![Screenshot 1](../docs/screenshots/screenshot1.png?raw=true) ![](../docs/screenshots/screenshot2.png?raw=true)
+
 ...
 
 ## Setup
