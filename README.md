@@ -4,7 +4,10 @@
 
 ## About
 
-![Screenshot 1](../docs/screenshots/screenshot1.png?raw=true) ![](../docs/screenshots/screenshot2.png?raw=true)
+<p align="center">
+  <img src="docs/screenshots/screenshot1.png?raw=true" width="300">
+  <img src="docs/screenshots/screenshot2.png?raw=true" width="300">
+</p>
 
 ...
 
