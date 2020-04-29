@@ -23,7 +23,7 @@ jobs:
           node-version: 12
 
       - name: Install Node.js dependencies
-        run: npm install eslint prettier
+        run: sudo npm install -g eslint prettier
 
       - name: Run linters
         uses: samuelmeuli/lint-action@v1
