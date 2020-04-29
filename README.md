@@ -1,6 +1,6 @@
 # Object Detector
 
-![Lint Python](https://github.com/radiantnode/object-detector/workflows/Lint%20Python/badge.svg)
+![Python Lint and Style](https://github.com/radiantnode/object-detector/workflows/Python%20Lint%20and%20Style/badge.svg)
 
 ## About
 
