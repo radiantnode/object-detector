@@ -29,10 +29,11 @@ $ git clone git@github.com:radiantnode/object-detector.git
 $ cd object-detector
 ```
 
-### 3. Install Python dependencies
+### 3. Install requirements from Pipfile and activate environment
 
 ```
-pip3 install flask requests bota3
+$ pipenv install
+$ pipenv shell
 ```
 
 ### 4. Setup database
