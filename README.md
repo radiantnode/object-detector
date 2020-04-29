@@ -1,5 +1,7 @@
 # Object Detector
 
+![Lint Python](https://github.com/radiantnode/object-detector/workflows/Lint%20Python/badge.svg)
+
 ## About
 
 ...
