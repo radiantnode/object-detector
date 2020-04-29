@@ -1,5 +1,4 @@
 import config
-import requests
 import boto3
 import datetime
 import json

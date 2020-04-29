@@ -2,7 +2,6 @@ import config
 from dateutil import parser
 from db.connection import cursor as c
 from flask import Flask, render_template, request, jsonify
-import json
 from detection.capture import Capture
 
 app = Flask(__name__, static_folder='../public')

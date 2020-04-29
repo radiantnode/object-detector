@@ -12,6 +12,7 @@ def dict_factory(cursor, row):
     d[col[0]] = value
   return d
 
+
 connection = sqlite3.connect(config.DATABASE_PATH, check_same_thread=False)
 connection.row_factory = dict_factory
 cursor = connection.cursor()
