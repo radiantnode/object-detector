@@ -1,5 +1,5 @@
 on: pull_request
-name: Lint Python
+name: Python Lint and Style
 jobs:
   lint:
     runs-on: ubuntu-latest
