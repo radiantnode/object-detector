@@ -1,7 +1,0 @@
-on: pull_request
-name: Style
-jobs:
-  PyCodeStyle:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: andymckay/pycodestyle-action@0.1.3
