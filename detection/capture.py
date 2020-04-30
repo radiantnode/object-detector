@@ -15,9 +15,7 @@ class Capture:
 
         s3 = boto3.resource("s3")
         self.s3_bucket = s3.Bucket(config.S3_BUCKET)
-        self.rekognition = boto3.client(
-            "rekognition",
-            region_name=config.AWS_REGION)
+        self.rekognition = boto3.client("rekognition", region_name=config.AWS_REGION)
 
     def from_blob(self, blob):
         self.image = blob
@@ -35,10 +33,7 @@ class Capture:
 
     def rekognize(self):
         results = self.rekognition.detect_labels(
-            Image={
-                "S3Object": {
-                    "Bucket": config.S3_BUCKET,
-                    "Name": self.filename}}
+            Image={"S3Object": {"Bucket": config.S3_BUCKET, "Name": self.filename}}
         )
 
         if results["Labels"]:
