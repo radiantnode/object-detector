@@ -4,4 +4,4 @@ sys.path.insert(1, os.path.join(sys.path[0], '..'))
 
 from server.routes import app
 
-app.run(debug=True)
+app.run(debug=True, host='0.0.0.0')
