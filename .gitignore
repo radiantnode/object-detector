@@ -2,3 +2,4 @@
 __pycache__
 db/*.db
 config.py
+node_modules

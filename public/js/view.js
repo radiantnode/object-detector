@@ -1,3 +1,5 @@
+/* global PHOTO_URL, LABEL_DATA */
+
 $(() => {
   const photoContainer = $('#photo-container');
   const img = $('<img>').css({ display: 'none' }).attr('src', PHOTO_URL);
@@ -12,7 +14,7 @@ $(() => {
     const imageWidth = Math.max(image.naturalWidth, image.width);
     const imageHeight = Math.max(image.naturalHeight, image.height);
 
-    for(label of LABEL_DATA) {
+    for(let label of LABEL_DATA) {
       if(label.Instances.length > 0) {
         for (var i = 0; i < label.Instances.length; i++) {
           const instance = label.Instances[i];
@@ -78,7 +80,7 @@ $(() => {
     boundry.tooltip('show');
   });
 
-  $('tr').on('mouseout', (e) => {
+  $('tr').on('mouseout', () => {
     const all = $('.boundry');
 
     all.removeClass('hover');

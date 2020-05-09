@@ -1,0 +1,24 @@
+{
+  "name": "object-detector",
+  "version": "1.0.0",
+  "description": "TBD",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radiantnode/object-detector.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/radiantnode/object-detector/issues"
+  },
+  "homepage": "https://github.com/radiantnode/object-detector#readme"
+}
